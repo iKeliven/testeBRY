@@ -1,0 +1,41 @@
+<div>
+    <h2>Cadastrar Funcionário</h2>
+    <form (ndSubmit)="insertCompany()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control" [(ngModel)]="employee.name">
+        </div>
+
+        <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" class="form-control" [(ngModel)]="employee.cpf">
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="text" name="email" class="form-control" [(ngModel)]="employee.email">
+        </div>
+
+        <div class="form-group">
+            <label for="adress">Endereço</label>
+            <input type="text" name="adress" class="form-control" [(ngModel)]="employee.adress">
+        </div>
+
+        <div class="form-group">
+            <label for="complement">Complemento:</label>
+            <input type="text" name="complement" class="form-control" [(ngModel)]="employee.complement">
+        </div>
+
+        <div class="form-group">
+            <label for="number">Número</label>
+            <input type="text" name="number" class="form-control" [(ngModel)]="employee.number">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Senha</label>
+            <input type="password" name="password" class="form-control"  [(ngModel)]="employee.password">
+        </div>
+        
+        <button class="btn btn-dark btn-md" type="submit">Cadastrar</button>
+    </form>
+</div>    

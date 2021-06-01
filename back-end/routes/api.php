@@ -17,3 +17,32 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+// get all employees
+Route::get('employees','EmployeController@getEmployee', );
+
+// get specic employee detail
+Route::get('employee/{id}', 'EmployeController@getEmployeeById');
+
+//add employee
+Route::post('addEmployee','EmployeController@addEmployee');
+
+//update Employee
+Route::put('updateEmployee/{id}', 'EmployeController@updateEmployee');
+
+//delete employee
+Route::delete('deleteEmployee/{id}', 'EmployeController@deleteEmployee');  
+
+// get all companies
+Route::get('companies','CompanyController@getCompany', );
+
+// get specic company detail
+Route::get('employee/{id}', 'EmployeController@getCompanyById');
+
+//add company
+Route::post('addCompany','CompanyController@addCompany');
+
+//update company
+Route::put('updateCompany/{id}', 'CompanyController@updateCompany');
+
+//delete company
+Route::delete('deleteCompany/{id}', 'CompanyController@deleteCompany');  

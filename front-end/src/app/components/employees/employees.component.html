@@ -1,0 +1,34 @@
+<h1>Funcionários</h1>
+<button class="btn btn-dark btn-md" href="./employee-insert/employee-insert.html">Cadastrar</button>
+<form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Nome do Funcionário" aria-label="Search" ht>
+    <button class="btn btn-dark btn-md" type="submit">Pesquisar</button>
+</form>
+
+<table class="table"> 
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">CPF</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Endereço</th>
+            <th scope="col">Número</th>
+            <th scope="col">Empresa</th>
+            <th >Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *rgFor = "let emp of employees">
+            <th scope="row">{{ emp.employee_id }}</th>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.cpf }}</td>
+            <td>{{ emp.email }}</td>
+            <td>{{ emp.adress }}</td>
+            <td>{{ emp.number }}</td>
+            <td>{{ emp.company_id }}</td>
+            <td><button class="btn bvtn-danger btn-sm" (click)="deleteEmployee(emp.id)" icon="pi pi-trash"></button></td>
+            <td><button class="btn bvtn-danger btn-sm mx-1" routerLink="edit/{{emp.id}}" icon="pi pi-user-edit"></button></td>
+        </tr>
+    </tbody>
+</table>

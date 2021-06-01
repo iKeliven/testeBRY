@@ -1,0 +1,32 @@
+<h1>Empresas</h1>
+<button class="btn btn-dark btn-md" href="./company-insert/company-insert.html">Cadastrar</button>
+<form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Nome da empresa" aria-label="Search" ht>
+    <button class="btn btn-dark btn-md" type="submit">Pesquisar</button>
+</form>
+
+<table class="table"> 
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">CNPJ</th>
+            <th scope="col">Endereço</th>
+            <th scope="col">Número</th>
+            <th scope="col">Funcionários</th>
+            <th >Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *rgFor = "let emp of companies">
+            <th scope="row">{{ emp.company_id }}</th>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.cnpj }}</td>
+            <td>{{ emp.adress }}</td>
+            <td>{{ emp.number }}</td>
+            <td>{{ emp.employee_id }}</td>
+            <td><button class="btn bvtn-danger btn-sm" (click)="deleteCompany(emp.id)" icon="pi pi-trash"></button></td>
+            <td><button class="btn bvtn-danger btn-sm mx-1" routerLink="edit/{{emp.id}}" icon="pi pi-user-edit"></button></td>
+        </tr>
+    </tbody>
+</table>
